@@ -16,6 +16,7 @@
       value: "1"
       sysctl_set: true
   when: ansible_virtualization_type != "docker"
+  ignore_errors: true
 
 - name: systemd restart tmp.mount
   become: true
